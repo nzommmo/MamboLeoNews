@@ -19,10 +19,10 @@ if (!$conn) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Escape user input to prevent SQL Injection (replace with your actual data)
   $title = mysqli_real_escape_string($conn, $_POST["title"]);
-  $info = mysqli_real_escape_string($conn, $_POST["info"]);
+  $info = mysqli_real_escape_string($conn, $_POST["summary"]);
 
   // SQL insert query
-  $sql = "INSERT INTO Articles (title, info) VALUES ('$title', '$info')";
+  $sql = "INSERT INTO Articles (title, summary) VALUES ('$title', '$summary')";
 
   if (mysqli_query($conn, $sql)) {
     $message = "New record created successfully";
@@ -35,25 +35,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($conn);
 
 ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Add News Article</title>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <h2>Add News Article</h2>
+    <title>Add NEWS</title>
+  </head>
+  <body>
 
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title"><br><br>
-    <label for="info">Information:</label>
-    <textarea id="info" name="info" rows="5" cols="30"></textarea><br><br>
-    <input type="submit" value="Submit">
-  </form>
+  <div class="container">
+    <h2>Add News Article</h2>
 
-  <?php echo $message; ?>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="summary">Information:</label>
+        <textarea class="form-control" id="summary" name="summary" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
-</body>
+    <?php echo $message; ?>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
 </html>
