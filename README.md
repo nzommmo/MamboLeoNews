@@ -4,7 +4,7 @@ MamboLeoNews is a webpage that display news information scraped from https://www
 The news are displayed in a grid format making it user friendly and easy to navigate.
 
 ## Table of Contents
-
+- [LivePreview](#LivePreview)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
@@ -49,5 +49,8 @@ Some components of this project may be subject to different licenses. Please ref
 ## Contact
 Email: ericnzomo17@gmail.com<br>
 GitHub: nzommmo<br>
+
+## LivePreview
+http://mamboleonews.infinityfreeapp.com/MamboLeoNews/index.html
 
 
