@@ -1,16 +1,5 @@
 <?php
-// Establish database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "News";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'config.php'; // Include the database configuration file
 
 // Register user
 if (isset($_POST['register'])) {
@@ -18,7 +7,7 @@ if (isset($_POST['register'])) {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash password
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO users (name, hashedpassword,email) VALUES ('$name', '$password','$email')";
+    $sql = "INSERT INTO users (name, hashedpassword, email) VALUES ('$name', '$password', '$email')";
 
     if ($conn->query($sql) === TRUE) {
         echo "User registered successfully";
@@ -46,13 +35,10 @@ if (isset($_POST['login'])) {
             echo "Invalid email or password";
         }
     } else {
-        echo "email not found";
+        echo "Email not found";
     }
 }
-
-$conn->close();
 ?>
-
 
 <!doctype html>
 <html lang="en">

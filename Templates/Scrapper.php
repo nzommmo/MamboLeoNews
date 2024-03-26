@@ -1,4 +1,6 @@
 <?php
+require_once 'config.php'; // Include the database configuration file
+
 function scrapeAndUploadArticles() {
     $url = 'https://www.standardmedia.co.ke/'; // Replace with the URL of the website you want to scrape
 
@@ -48,17 +50,7 @@ function scrapeAndUploadArticles() {
             }
         }
 
-        // Connect to the database
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "News";
-
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        global $conn; // Access the database connection from config.php
 
         // Check if articles already exist in the database
         $existingArticles = [];
@@ -75,13 +67,12 @@ function scrapeAndUploadArticles() {
             $title = mysqli_real_escape_string($conn, $article['title']);
             $url = mysqli_real_escape_string($conn, $article['url']);
             $image = mysqli_real_escape_string($conn, $article['image']);
-            $summary = mysqli_real_escape_string($conn, $article['summary']);
-
+            $summary = ""; // Summary is not extracted in the current scraping logic
 
             // Check if the article is new
             if (!isset($existingArticles[$title])) {
                 // SQL query to insert data into the database
-                $sql = "INSERT INTO Articles2 (title, summary,article_url, image_url) VALUES ('$title', '$summary','$url', '$image')";
+                $sql = "INSERT INTO Articles2 (title, summary, article_url, image_url) VALUES ('$title', '$summary', '$url', '$image')";
 
                 if (mysqli_query($conn, $sql)) {
                     echo "New article inserted successfully: $title <br>";
@@ -91,8 +82,6 @@ function scrapeAndUploadArticles() {
                 }
             }
         }
-
-        mysqli_close($conn);
     }
 }
 

@@ -1,19 +1,8 @@
 <?php
-// Database connection details (replace with your actual credentials)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "News";
+require_once 'config.php'; // Include the database configuration file
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 // Fetch titles and URLs from the database
-$sql = "SELECT title, article_url,image_url FROM Articles2";
+$sql = "SELECT title, article_url, image_url FROM Articles2";
 $result = mysqli_query($conn, $sql);
 
 // Array to store fetched articles
@@ -27,8 +16,6 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results found in the database";
 }
-
-
 
 // Function to fetch image from Unsplash API based on title
 function getImageFromUnsplash($title) {
@@ -85,6 +72,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results found in the database";
 }
+
 // Function to fetch articles based on search query
 function searchArticles($conn, $query) {
     $query = mysqli_real_escape_string($conn, $query);
@@ -149,6 +137,16 @@ mysqli_close($conn);
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+      </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../Templates/login.php">Login</a>
+        </li>
+
+      </ul>
+    
+        
         <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

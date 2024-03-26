@@ -1,40 +1,28 @@
 <?php
-
-// Database connection details (replace with your actual credentials)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "News";
+require_once 'config.php'; // Include the database configuration file
 
 $message = ""; // Initialize variable for message
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Escape user input to prevent SQL Injection (replace with your actual data)
-  $title = mysqli_real_escape_string($conn, $_POST["title"]);
-  $info = mysqli_real_escape_string($conn, $_POST["summary"]);
+    // Escape user input to prevent SQL Injection
+    $title = mysqli_real_escape_string($conn, $_POST["title"]);
+    $summary = mysqli_real_escape_string($conn, $_POST["summary"]);
+    $article_url = mysqli_real_escape_string($conn, $_POST["article_url"]);
 
-  // SQL insert query
-  $sql = "INSERT INTO Articles2 (title, summary) VALUES ('$title', '$summary')";
+    // SQL insert query
+    $sql = "INSERT INTO Articles2 (title, summary, article_url) VALUES ('$title', '$summary', '$article_url')";
 
-  if (mysqli_query($conn, $sql)) {
-    $message = "New record created successfully";
-  } else {
-    $message = "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
+    if (mysqli_query($conn, $sql)) {
+        $message = "New record created successfully";
+    } else {
+        $message = "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 }
 
-// Close connection
-mysqli_close($conn);
-
+// Close connection (not necessary as config.php handles it)
+// mysqli_close($conn);
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -58,6 +46,10 @@ mysqli_close($conn);
       <div class="form-group">
         <label for="summary">Information:</label>
         <textarea class="form-control" id="summary" name="summary" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="article_url">article_url:</label>
+        <input type="text" class="form-control" id="title" name="article_url">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
