@@ -71,7 +71,7 @@ function getImageFromUnsplash($title) {
 }
 
 // Fetch titles from the database
-$sql = "SELECT title FROM Articles LIMIT 5";
+$sql = "SELECT title FROM Articles2 LIMIT 5";
 $result = mysqli_query($conn, $sql);
 
 // Array to store fetched titles
@@ -149,10 +149,6 @@ mysqli_close($conn);
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../Templates/login.php">Login</a>
-        </li>
-
         <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -209,8 +205,8 @@ mysqli_close($conn);
         
       
       </ul>
-
-    -->
+-->
+    
       <form class="d-flex" method="GET">
         <input class="form-control me-2" type="search"  name="q"    placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
