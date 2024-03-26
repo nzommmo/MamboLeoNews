@@ -36,12 +36,15 @@ Supporting Stack:<br>
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+1.This project is licensed under the [MIT License](LICENSE).
 
 The MIT License is a permissive open-source license that allows you to use, modify, and distribute this software for any purpose, with or without attribution. See the [LICENSE](LICENSE) file for the full text of the license.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+2.SSL Certificat
+### Overview
+An SSL (Secure Sockets Layer) certificate ensures secure communication between a client and a server by encrypting the data transmitted over the network. It is crucial for protecting sensitive information and maintaining user trust.
 ### Third-Party Dependencies
 
 Some components of this project may be subject to different licenses. Please refer to the documentation or source code of individual dependencies for their respective license information.
