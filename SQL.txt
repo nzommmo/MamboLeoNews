@@ -1,0 +1,207 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Mar 26, 2024 at 10:41 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `News`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Articles2`
+--
+
+CREATE TABLE `Articles2` (
+  `article_id` int(11) NOT NULL,
+  `title` text DEFAULT NULL,
+  `summary` text DEFAULT NULL,
+  `published_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `article_url` text NOT NULL,
+  `image_url` text DEFAULT NULL,
+  `date_posted` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Articles2`
+--
+
+INSERT INTO `Articles2` (`article_id`, `title`, `summary`, `published_at`, `article_url`, `image_url`, `date_posted`) VALUES
+(1, 'Forget the past: Gachagua eats humble pie says sorry to Kenyattas', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/politics/article/2001492121/forget-the-past-gachagua-eats-humble-pie-says-sorry-to-kenyattas', 'https://www.standardmedia.co.ke/assets/img/logo.PNG', '2024-03-26 08:39:06'),
+(2, 'Inside Ruto\'s Sh16 trillion last-ditch plan to save Vision 2030', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/financial-standard/article/2001492127/inside-rutos-sh16-trillion-last-ditch-plan-to-save-vision-2030', 'https://www.standardmedia.co.ke/assets/images/logos/standard-logo.png', '2024-03-26 08:39:06'),
+(3, 'Ex-CEO seeks Sh 5.9 billion compensation for malicious prosecution', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/national/article/2001492128/ex-ceo-seeks-sh-59-billion-compensation-for-malicious-prosecution', 'https://www.standardmedia.co.ke/assets/images/logos/standard-logo.png', '2024-03-26 08:39:06'),
+(4, 'Dr Patrick Amoth, the longest-acting Health director general', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/health-science/article/2001492129/dr-patrick-amoth-the-longest-acting-health-director-general', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/smZyxRTrGstZ9WtazfLYPqO0ihb78IitTFY9BvEW.jpg', '2024-03-26 08:39:06'),
+(5, 'Taxpayers shoulder burden of state\'s defiance of court orders', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/national/article/2001492114/taxpayers-shoulder-burden-of-states-defiance-of-court-orders', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/smZyxRTrGstZ9WtazfLYPqO0ihb78IitTFY9BvEW.jpg', '2024-03-26 08:39:06'),
+(6, 'KDF soldier sacked for \'burning a spy\' awarded Sh5m', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/national/article/2001492126/kdf-soldier-sacked-for-burning-a-spy-awarded-sh5m', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/enPUvi4j90gm9JKhiavskreOIDN0zcHT2iAtuR5s.jpg', '2024-03-26 08:39:06'),
+(7, 'UDA\'s dalliance with China\'s Communist Party raises eye brows', '', '2024-03-26 08:39:06', 'https://www.standardmedia.co.ke/politics/article/2001492130/udas-dalliance-with-chinas-communist-party-raises-eye-brows', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/zHHSoHlXVQkxv0vmHAxIV02zxwBWInha8YSxY301.jpg', '2024-03-26 08:39:06'),
+(8, 'Basic steps to Chia farming the high-value crop', '', '2024-03-26 08:39:07', 'https://www.standardmedia.co.ke/crop/article/2001491395/basic-steps-to-chia-farming-the-high-value-crop', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/DLV4yrYVaFPS8gII7QemkK83DC7aZGIXrVLairU9.jpg', '2024-03-26 08:39:07'),
+(9, 'Work harder! Otile Brown says there is no International artist in East Africa', '', '2024-03-26 08:39:07', 'https://www.standardmedia.co.ke/entertainment/article/2001490942/work-harder-otile-brown-says-there-is-no-international-artist-in-east-africa', 'https://cdn.standardmedia.co.ke/images/articles/thumbnails/nZFZaHzeVRlAGxrMKvGN4N6EpTQXMONTGTppBAii.jpg', '2024-03-26 08:39:07'),
+(14, 'Heartbroken DusitD2 hero takes own life after mother\'s death', '', '2024-03-26 08:39:07', 'https://www.standardmedia.co.ke/national/article/2001492122/heartbroken-dusitd2-hero-takes-own-life-after-mothers-death', 'https://cdn.standardmedia.co.ke/images/slideshows/thumbnails/V81jHWwrRizqTkPVV6HEfb3q9HyVkbMgsyDPUkpp.jpg', '2024-03-26 08:39:07'),
+(20, 'Court dismisses Anne Njeri\'s Sh17b diesel claim against KPC', '', '2024-03-26 08:39:07', 'https://www.standardmedia.co.ke/national/article/2001492133/court-dismisses-anne-njeris-sh17b-diesel-claim-against-kpc', 'https://cdn.standardmedia.co.ke/images/slideshows/thumbnails/rwoJ3HFAB0dxyzSOARXA3LolyZ2iGgUh7NA49IrW.jpg', '2024-03-26 08:39:07'),
+(21, 'Another judge joins judicial voices calling against life jail sentences', '', '2024-03-26 08:39:07', 'https://www.standardmedia.co.ke/national/article/2001492142/another-judge-joins-judicial-voices-calling-against-life-jail-sentences', 'https://cdn.standardmedia.co.ke/images/slideshows/thumbnails/IPweOb8lkrY6O8301nyS7nqiN8q7B21yF5jjV5hC.jpg', '2024-03-26 08:39:07'),
+(22, 'Senate directs firms to mitigate non-revenue water loss', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/national/article/2001492139/senate-directs-firms-to-mitigate-non-revenue-water-loss', 'https://cdn.standardmedia.co.ke/images/slideshows/thumbnails/WJl5lheKCMNZOpYM9tmWpGOgcWRPwCwEWih5rE07.jpg', '2024-03-26 08:39:08'),
+(23, 'Heroic police officer swept away during daring rescue in Nairobi floods', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/national/article/2001492100/heroic-police-officer-swept-away-during-daring-rescue-in-nairobi-floods', 'https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-128.png', '2024-03-26 08:39:08'),
+(24, 'You can now auction State House to recover debt, court rules', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/national/article/2001492087/you-can-now-auction-state-house-to-recover-debt-court-rules', 'https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-128.png', '2024-03-26 08:39:08'),
+(25, 'Government officials have nowhere to hide but to pay awards', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/national/article/2001492089/government-officials-have-nowhere-to-hide-but-to-pay-awards', 'https://cdn4.iconfinder.com/data/icons/social-icons-16/512/LinkedIn_alt-128.png', '2024-03-26 08:39:08'),
+(26, 'Explained: The Competition Authority of Kenya\'s penalisation formula', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/branding-voice/article/2001492106/explained-the-competition-authority-of-kenyas-penalisation-formula', 'https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Youtube_glyph_svg-128.png', '2024-03-26 08:39:08'),
+(27, 'NHIF payments now on e- citizen through paybill 222222', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/branding-voice/article/2001491879/nhif-payments-now-on-e-citizen-through-paybill-222222', 'https://cdn0.iconfinder.com/data/icons/eon-social-media-contact-info-2/32/telegram_social_media_network_chat-128.png', '2024-03-26 08:39:08'),
+(28, '1xBet is named the Best Sportsbook Operator in Africa', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/branding-voice/article/2001491832/1xbet-is-named-the-best-sportsbook-operator-in-africa', 'https://www.standardmedia.co.ke/assets/img/logo.PNG', '2024-03-26 08:39:08'),
+(29, 'Ericsson\'s ambition for Africa', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/branding-voice/article/2001491779/ericssons-ambition-for-africa', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(30, '18 Kenyan students win regional awards for the Huawei ICT Competition', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/branding-voice/article/2001491536/18-kenyan-students-win-regional-awards-for-the-huawei-ict-competition', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(31, 'Counties urged to finalise their energy plans', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/business/article/2001492145/counties-urged-to-finalise-their-energy-plans', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(32, 'NSE banks on new trading platform to revive bond market', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/financial-standard/article/2001492112/nse-banks-on-new-trading-platform-to-revive-bond-market', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(33, 'IM posts Sh12.6 billion profit', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/business/article/2001492137/im-posts-sh126-billion-profit', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(34, 'KQ resumes flights to Eldoret airport after 10-year hiatus', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/business/article/2001492136/kq-resumes-flights-to-eldoret-airport-after-10-year-hiatus', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(35, 'Windfall for coffee farmers as State disburses Sh4 billion', '', '2024-03-26 08:39:08', 'https://www.standardmedia.co.ke/business/article/2001492081/windfall-for-coffee-farmers-as-state-disburses-sh4-billion', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:08'),
+(36, 'Bottlenecks stagnating the EAC integration amid fresh lobbying', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/business/article/2001492018/bottlenecks-stagnating-the-eac-integration-amid-fresh-lobbying', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(37, 'Boost as Kenya and Tanzania advance bilateral trade relations', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/business/article/2001492019/boost-as-kenya-and-tanzania-advance-bilateral-trade-relations', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(38, 'Damage to undersea fibreoptic highlights Africa vulnerability', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/business/article/2001492020/damage-to-undersea-fibreoptic-highlights-africa-vulnerability', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(39, 'South Sudan cargo pile up in Mombasa as agents reject levy', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/business/article/2001492021/south-sudan-cargo-pile-up-in-mombasa-as-agents-reject-levy', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(40, 'State to press murder charges against DJ Joe Mfalme over officer\'s killing', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/nairobi/article/2001492124/state-to-press-murder-charges-against-dj-joe-mfalme-over-officers-killing', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(41, 'Pastor hits out at Kenya Kwanza MPs over Finance Act ignorance', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/central/article/2001492138/pastor-hits-out-at-kenya-kwanza-mps-over-finance-act-ignorance', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(42, 'Kenya loses bid to host climate change centre', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/nairobi/article/2001492144/kenya-loses-bid-to-host-climate-change-centre', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(43, 'About 420 families face eviction from disputed 63-acre prime land', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/rift-valley/article/2001492143/about-420-families-face-eviction-from-disputed-63-acre-prime-land', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(44, 'Decades old controversy surrounding 5,000 acre Ndabibi land', '', '2024-03-26 08:39:09', 'https://www.standardmedia.co.ke/rift-valley/article/2001492115/decades-old-controversy-surrounding-5000-acre-ndabibi-land', 'https://img.icons8.com/color/20/000000/diplomacy.png', '2024-03-26 08:39:09'),
+(45, 'How colonialism prepared ground for Mount Kenya\'s alcohol disaster', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/opinion/article/2001492109/how-colonialism-prepared-ground-for-mount-kenyas-alcohol-disaster', '', '2024-03-26 08:39:10'),
+(46, 'The long walk to media freedom in Kenya', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/opinion/article/2001492140/the-long-walk-to-media-freedom-in-kenya', '', '2024-03-26 08:39:10'),
+(47, 'Why the days of Kenyan ethnic political kingpins are numbered', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/opinion/article/2001492077/why-the-days-of-kenyan-ethnic-political-kingpins-are-numbered', '', '2024-03-26 08:39:10'),
+(48, 'Shame on Treasury CS bid to tax milk and bread to impress IMF', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/opinion/article/2001492010/shame-on-treasury-cs-bid-to-tax-milk-and-bread-to-impress-imf', '', '2024-03-26 08:39:10'),
+(49, 'Green hydrogen will boost Kenya\'s quest for net zero economy', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/opinion/article/2001492080/green-hydrogen-will-boost-kenyas-quest-for-net-zero-economy', '', '2024-03-26 08:39:10'),
+(50, 'Doctors\' strike', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/cartoons/article/2001491769/doctors-strike', '', '2024-03-26 08:39:10'),
+(51, 'Even with all its shortcomings, Nairobi could be witnessing a silent rebirth', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/xn-iraki/article/2001492132/even-with-all-its-shortcomings-nairobi-could-be-witnessing-a-silent-rebirth', '', '2024-03-26 08:39:10'),
+(52, 'Why Russians voted overwhelmingly for Putin in recent elections', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/macharia-munene/article/2001492078/why-russians-voted-overwhelmingly-for-putin-in-recent-elections', '', '2024-03-26 08:39:10'),
+(53, 'Mr President, this is what people are saying about your leadership', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/barrack-muluka/article/2001491968/mr-president-this-is-what-people-are-saying-about-your-leadership', '', '2024-03-26 08:39:10'),
+(54, 'Festering wound in health sector needs more than threats to heal', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/houghton-irungu/article/2001491973/festering-wound-in-health-sector-needs-more-than-threats-to-heal', '', '2024-03-26 08:39:10'),
+(55, 'Politics', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/houghton-irungu/article/2001491973/festering-wound-in-health-sector-needs-more-than-threats-to-heal', '', '2024-03-26 08:39:10'),
+(57, 'Kalonzo bets on luck, hard-hitting politics, mobilization', '', '2024-03-26 08:39:10', 'https://www.standardmedia.co.ke/politics/article/2001492027/kalonzo-bets-on-luck-hard-hitting-politics-mobilization', '', '2024-03-26 08:39:10'),
+(58, 'Which way Luo Nation if Raila exits local scene?', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/politics/article/2001492029/which-way-luo-nation-if-raila-exits-local-scene', '', '2024-03-26 08:39:11'),
+(59, 'President William Ruto\'s brewing storm', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/politics/article/2001492037/president-william-rutos-brewing-storm', '', '2024-03-26 08:39:11'),
+(60, 'MPs hand Ruto free will to hire unlimited CASs in amended Bill', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/politics/article/2001492039/mps-hand-ruto-free-will-to-hire-unlimited-cass-in-amended-bill', '', '2024-03-26 08:39:11'),
+(61, 'Kenya\'s Talanta Hela teams shine bright in Spain\'s Costa Daurada Cup debut', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/football/article/2001492131/kenyas-talanta-hela-teams-shine-bright-in-spains-costa-daurada-cup-debut', '', '2024-03-26 08:39:11'),
+(62, 'Safari Rally: Series leader Neuville ready to leave rivals choking in dust', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/motorsport/article/2001492095/safari-rally-series-leader-neuville-ready-to-leave-rivals-choking-in-dust', '', '2024-03-26 08:39:11'),
+(63, 'Gachomba\'s walk in wilderness ends with Chairman\'s prize', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/golf/article/2001492096/gachombas-walk-in-wilderness-ends-with-chairmans-prize', '', '2024-03-26 08:39:11'),
+(64, 'Cheruyot, Mutwa crowned Lukenya marathon champions', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/athletics/article/2001492092/cheruyot-mutwa-crowned-lukenya-marathon-champions', '', '2024-03-26 08:39:11'),
+(65, 'Premium\n Forget the past: Gachagua eats humble pie says sorry to Kenyattas', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/politics/article/2001492121/forget-the-past-gachagua-eats-humble-pie-says-sorry-to-kenyattas', '', '2024-03-26 08:39:11'),
+(66, 'Premium\nInside Ruto\'s Sh16 trillion last-ditch plan to save Vision 2030', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/financial-standard/article/2001492127/inside-rutos-sh16-trillion-last-ditch-plan-to-save-vision-2030', '', '2024-03-26 08:39:11'),
+(67, 'Premium\nEx-CEO seeks Sh 5.9 billion compensation for malicious prosecution', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/national/article/2001492128/ex-ceo-seeks-sh-59-billion-compensation-for-malicious-prosecution', '', '2024-03-26 08:39:11'),
+(68, 'Premium\nTaxpayers shoulder burden of state\'s defiance of court orders', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/national/article/2001492114/taxpayers-shoulder-burden-of-states-defiance-of-court-orders', '', '2024-03-26 08:39:11'),
+(69, 'Premium\nUDA\'s dalliance with China\'s Communist Party raises eye brows', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/politics/article/2001492130/udas-dalliance-with-chinas-communist-party-raises-eye-brows', '', '2024-03-26 08:39:11'),
+(70, 'Premium\nHow colonialism prepared ground for Mount Kenya\'s alcohol disaster', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/opinion/article/2001492109/how-colonialism-prepared-ground-for-mount-kenyas-alcohol-disaster', '', '2024-03-26 08:39:11'),
+(71, 'Premium\nHeartbroken DusitD2 hero takes own life after mother\'s death', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/national/article/2001492122/heartbroken-dusitd2-hero-takes-own-life-after-mothers-death', '', '2024-03-26 08:39:11'),
+(72, 'Premium\nEven with all its shortcomings, Nairobi could be witnessing a silent rebirth', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/xn-iraki/article/2001492132/even-with-all-its-shortcomings-nairobi-could-be-witnessing-a-silent-rebirth', '', '2024-03-26 08:39:11'),
+(73, 'Premium\nGovernment officials have nowhere to hide but to pay awards', '', '2024-03-26 08:39:11', 'https://www.standardmedia.co.ke/national/article/2001492089/government-officials-have-nowhere-to-hide-but-to-pay-awards', '', '2024-03-26 08:39:11'),
+(74, 'Premium\nYou can now auction State House to recover debt, court rules', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/national/article/2001492087/you-can-now-auction-state-house-to-recover-debt-court-rules', '', '2024-03-26 08:39:12'),
+(75, 'Premium\nActing VC\'s actions create anxiety and discord at Kaimosi Friends University', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/education/article/2001492082/acting-vcs-actions-create-anxiety-and-discord-at-kaimosi-friends-university', '', '2024-03-26 08:39:12'),
+(76, 'Premium\nWhy the days of Kenyan ethnic political kingpins are numbered', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/opinion/article/2001492077/why-the-days-of-kenyan-ethnic-political-kingpins-are-numbered', '', '2024-03-26 08:39:12'),
+(78, 'Help our scientists to tackle TB, other diseases afflicting Africa', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/health-opinion/article/2001492110/help-our-scientists-to-tackle-tb-other-diseases-afflicting-africa', '', '2024-03-26 08:39:12'),
+(79, 'Prevent dental problems with these tips', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/health-science/article/2001492061/prevent-dental-problems-with-these-tips', '', '2024-03-26 08:39:12'),
+(80, 'Dr Edith Kwobah remained stoic despite battling lung cancer at stage four', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/health-science/article/2001492076/dr-edith-kwobah-remained-stoic-despite-battling-lung-cancer-at-stage-four', '', '2024-03-26 08:39:12'),
+(81, 'Explained: How to file cases on the Judiciary e-filing system', '', '2024-03-26 08:39:12', 'https://www.standardmedia.co.ke/explainers/article/2001491885/explained-how-to-file-cases-on-the-judiciary-e-filing-system', '', '2024-03-26 08:39:12'),
+(82, 'What happens when a deputy governor is impeached..', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/explainers/article/2001491527/what-happens-when-a-deputy-governor-is-impeached', '', '2024-03-26 08:39:13'),
+(83, 'Premium\nExplained: Death sentence in Kenya', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/explainers/article/2001491472/explained-death-sentence-in-kenya', '', '2024-03-26 08:39:13'),
+(84, 'No new currency for East Africa, EAC says', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/fact-check/article/2001490895/no-new-currency-for-east-africa-eac-says', '', '2024-03-26 08:39:13'),
+(85, 'Explainer: How the eTIMS works', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/explainers/article/2001490890/explainer-how-the-etims-works', '', '2024-03-26 08:39:13'),
+(86, 'Explainer: Why the sudden rise in heat?', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/explainers/article/2001490416/explainer-why-the-sudden-rise-in-heat', '', '2024-03-26 08:39:13'),
+(87, 'Boeing CEO Dave Calhoun to step down before year ends', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/world/article/2001492135/boeing-ceo-dave-calhoun-to-step-down-before-year-ends', '', '2024-03-26 08:39:13'),
+(88, 'Senegalese voters go to polls in delayed presidential election', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/africa/article/2001492051/senegalese-voters-go-to-polls-in-delayed-presidential-election', '', '2024-03-26 08:39:13'),
+(89, 'Gangs gain ground in Haiti\'s capital as transitional government falters', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/america/article/2001492049/gangs-gain-ground-in-haitis-capital-as-transitional-government-falters', '', '2024-03-26 08:39:13'),
+(90, 'Russia arrests concert hall gunmen as death toll rises to 115', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/europe/article/2001492005/russia-arrests-concert-hall-gunmen-as-death-toll-rises-to-115', '', '2024-03-26 08:39:13'),
+(91, 'Islamic State group claims attack on Moscow concert hall; 60 dead', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/europe/article/2001491999/islamic-state-group-claims-attack-on-moscow-concert-hall-60-dead', '', '2024-03-26 08:39:13'),
+(92, 'Malawi parliament to debate cannabis farming', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/africa/article/2001491998/malawi-parliament-to-debate-cannabis-farming', '', '2024-03-26 08:39:13'),
+(93, 'Tips for couples travelling together', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/lifestyle/article/2001492000/tips-for-couples-travelling-together', '', '2024-03-26 08:39:13'),
+(94, '\'The Wandering Doctor\'s minimalist apartment', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/lifestyle/article/2001491593/the-wandering-doctors-minimalist-apartment', '', '2024-03-26 08:39:13'),
+(95, 'Laikipia aims to shine as a premier tourist destination', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/arts-and-culture/article/2001491190/laikipia-aims-to-shine-as-a-premier-tourist-destination', '', '2024-03-26 08:39:13'),
+(96, 'Getting over the fear of flying', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/lifestyle/article/2001491175/getting-over-the-fear-of-flying', '', '2024-03-26 08:39:13'),
+(97, 'Feds raid Diddy\'s homes amid sex trafficking probe', '', '2024-03-26 08:39:13', 'https://www.standardmedia.co.ke/thenairobian/article/2001492141/feds-raid-diddys-homes-amid-sex-trafficking-probe', '', '2024-03-26 08:39:13'),
+(98, 'How to raise kids with smart money habits', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/thenairobian/article/2001492111/how-to-raise-kids-with-smart-money-habits', '', '2024-03-26 08:39:14'),
+(99, 'Tips for couples travelling on a budget', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/thenairobian/article/2001492104/tips-for-couples-travelling-on-a-budget', '', '2024-03-26 08:39:14'),
+(100, 'How to reduce mortality on your new poultry farm', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/farmkenya/article/2001491956/how-to-reduce-mortality-on-your-new-poultry-farm', '', '2024-03-26 08:39:14'),
+(101, 'Sh50.9b plan to combat pollution', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/farmkenya/article/2001491952/sh509b-plan-to-combat-pollution', '', '2024-03-26 08:39:14'),
+(102, 'Get to know the stages of calving in your cattle', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/farmkenya/article/2001491871/get-to-know-the-stages-of-calving-in-your-cattle', '', '2024-03-26 08:39:14'),
+(103, 'Initiative to woo farmers back to cashew nuts', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/farmkenya/article/2001491725/initiative-to-woo-farmers-back-to-cashew-nuts', '', '2024-03-26 08:39:14'),
+(104, 'Create a safe haven for your children', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/evewoman/article/2001492150/create-a-safe-haven-for-your-children', '', '2024-03-26 08:39:14'),
+(105, 'Easy recipe: Creamy butter chicken', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/evewoman/article/2001492147/easy-recipe-creamy-butter-chicken', '', '2024-03-26 08:39:14'),
+(106, 'How to cut travel costs and still have fun', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/evewoman/article/2001492146/how-to-cut-travel-costs-and-still-have-fun', '', '2024-03-26 08:39:14'),
+(107, 'How to keep a busy house clean', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/evewoman/article/2001492107/how-to-keep-a-busy-house-clean', '', '2024-03-26 08:39:14'),
+(108, 'Should I move in with my boyfriend?', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/evewoman/article/2001492103/should-i-move-in-with-my-boyfriend', '', '2024-03-26 08:39:14'),
+(109, 'Customer Service Week Quiz', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/quizzes/article/2001482702/customer-service-week-quiz', '', '2024-03-26 08:39:14'),
+(110, 'Grill and thrills: Choma na Ngoma is back, are you ready for the sizzle?', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/quizzes/article/2001479160/grill-and-thrills-choma-na-ngoma-is-back-are-you-ready-for-the-sizzle', '', '2024-03-26 08:39:14'),
+(111, 'FIFA Women\'s World Cup Quiz', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/quizzes/article/2001478376/fifa-womens-world-cup-quiz', '', '2024-03-26 08:39:14'),
+(112, 'How well do you know Prof Kindiki Kithure?', '', '2024-03-26 08:39:14', 'https://www.standardmedia.co.ke/quizzes/article/2001476917/how-well-do-you-know-prof-kindiki-kithure', '', '2024-03-26 08:39:14'),
+(145, 'Help! I am always falling for married men', NULL, '2024-03-26 08:39:40', 'https://www.standardmedia.co.ke/evewoman/article/2001492102/help-i-am-always-falling-for-married-men', '', '2024-03-26 08:39:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `userid` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `hashedpassword` varchar(255) NOT NULL,
+  `createdon` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userid`, `name`, `email`, `hashedpassword`, `createdon`) VALUES
+(1, 'Eric Nzomo ', 'ericnzomo17@gmail.com', '$2y$10$xG6KiBj504aJKrmXni98d.xIFxboRMYr8v298GCTZMd9QaTfUuZPS', '2024-03-25 19:29:38'),
+(3, 'john', 'job@gmail.com', '$2y$10$EajybhCWCp06lneIRHSgvetlrUnt83Edi2zRgKmR1vbzIfRX4xbau', '2024-03-25 19:40:00'),
+(8, 'jane', 'ricknedo3@gmail.com', '$2y$10$Dq4spyl0bYbGFant94ZFvOp9n52TuqIb3qugKMrb.o9luxRBLqx6S', '2024-03-25 20:00:03');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Articles2`
+--
+ALTER TABLE `Articles2`
+  ADD PRIMARY KEY (`article_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userid`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Articles2`
+--
+ALTER TABLE `Articles2`
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=468;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

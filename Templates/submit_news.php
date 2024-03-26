@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $info = mysqli_real_escape_string($conn, $_POST["summary"]);
 
   // SQL insert query
-  $sql = "INSERT INTO Articles (title, summary) VALUES ('$title', '$summary')";
+  $sql = "INSERT INTO Articles2 (title, summary) VALUES ('$title', '$summary')";
 
   if (mysqli_query($conn, $sql)) {
     $message = "New record created successfully";
